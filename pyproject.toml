@@ -1,0 +1,20 @@
+
+[tool.mypy]
+python_version = "3.10"
+# warn_return_any = true
+exclude = [
+  "*venv/*", # TOML literal string (single-quotes, no escaping necessary)
+  "*venv/bin/*.py", # TOML basic string (double-quotes, backslash and other characters need escaping)
+]
+ignore_missing_imports = true
+ignore_missing_imports_per_module = true
+warn_unused_configs = true
+
+[tool.black]
+line-length = 120
+
+# pip install Flake8-pyproject
+[tool.flake8]
+count = true
+ignore = ['E231', 'E241']
+max-line-length = 120
