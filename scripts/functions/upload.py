@@ -20,7 +20,7 @@ async def upload_component(session, repo_url, source_filename: Path):
 
     async with session.post(repo_url, data=data, headers=headers) as response:
         if response.status == 204:
-            print(f"Upload {source_filename!r} Successfully!")
+          print(f"Upload {source_filename!r} Successfully!")
 
 
 async def upload_repository_components(
