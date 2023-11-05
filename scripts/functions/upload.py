@@ -4,8 +4,6 @@ from pathlib import Path
 
 import aiohttp
 
-from .repository import Color
-
 
 COMPONENTS_ROUTE = "/service/rest/v1/components"
 
@@ -22,7 +20,7 @@ async def upload_component(session, repo_url, source_filename: Path):
 
     async with session.post(repo_url, data=data, headers=headers) as response:
         if response.status == 204:
-            print(f"Upload {Color.BLUE}{source_filename}{Color.RESET} Successfully!")
+            print(f"Upload {source_filename!r} Successfully!")
 
 
 async def upload_repository_components(
