@@ -51,8 +51,7 @@ async def upload_repository_components(
         root_path = Path(root)
         async with aiohttp.ClientSession(auth=auth) as session:
             repo_format = await get_repo_type(nexus_base_url, session, repo_name)
-            input(f"$$$ Uploading to a {repo_format}.asset repo. $$$\n"
-                  "Please press Enter to confirm and continue ...")
+            input(f"$$$ Uploading to a {repo_format}.asset repo. $$$\nPlease press Enter to confirm and continue ...")
             component_path_list = [root_path / Path(x) for x in files]
             tasks = []
             for component in component_path_list:
