@@ -4,7 +4,7 @@ This project provides a set of commands to backup and restore files in a Nexus R
 
 ## Installation
 
-Before running the commands, make sure you have Python 3.8 or later installed. Then, install the required libraries with pip:
+Before running the commands, make sure you have Python 3.12 or later installed. Then, install the required libraries with pip:
 
 ```bash
 pip install -r requirements.txt
@@ -19,7 +19,7 @@ The CLI provides three commands: `repo-list`, `download`, and `upload`.
 The `repo-list` command retrieves a list of repositories from a Nexus server.
 
 ```bash
-python scripts repo-list --nexus-base-url http://example.com:8081 --repo-name <repository-name> --username <username> --password <password>
+python scripts repo-list --nexus-base-url http://example.com:8081 --username <username> --password <password>
 ```
 
 ### download
